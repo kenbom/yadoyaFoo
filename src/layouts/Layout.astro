@@ -1,0 +1,81 @@
+---
+	import Header from '../components/Header.astro';
+	import Footer from '../components/Footer.astro';
+	import '@fontsource/shippori-mincho';
+
+	interface Props {
+		title: string;
+	}
+
+	const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Astro description" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+</head>
+
+<body>
+	<Header class="header" />
+	<slot />
+	<Footer />
+</body>
+
+</html>
+
+<style>
+	:root {
+		/* --accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(45deg,
+				rgb(var(--accent)),
+				rgb(var(--accent-light)) 30%,
+				white 60%); */
+	}
+
+	html {
+		font-family: Shippori Mincho, system-ui, sans-serif;
+		background: #f0edea;
+		/* background-size: 224px; */
+	}
+
+	body {
+		/* display: grid; */
+		/* grid-template-columns: minmax(32px, 1fr) minmax(auto, 1120px) minmax(32px, 1fr); */
+	}
+
+	.header {
+		/* grid-template-columns: subgrid; */
+		/* grid-column: 2 / -2; */
+	}
+
+	.grid-temp {
+		display: grid;
+		grid-template-columns: minmax(32px, 1fr) minmax(auto, 1120px) minmax(32px,
+				1fr);
+		;
+		row-gap: 20px;
+		font-family: 'Shippori Mincho';
+	}
+
+	/* code {
+		font-family:
+			Shippori Mincho,
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	} */
+</style>

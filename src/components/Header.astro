@@ -1,0 +1,55 @@
+---
+
+---
+
+<div class="container">
+  <div class="header">
+    <a href="/">
+      <p>トップ</p>
+    </a>
+    <a href="/garden/">
+      <p>庭園</p>
+    </a>
+    <a href="/rooms/">
+      <p>居室</p>
+    </a>
+    <a href="/facilities/">
+      <p>設備</p>
+    </a>
+    <a href="/around/">
+      <p>周辺</p>
+    </a>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: minmax(32px, 1fr) minmax(auto, 1120px) minmax(32px,
+        1fr);
+    ;
+    /* row-gap: 20px; */
+  }
+
+  .header {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-auto-flow: column;
+    /* align-items: right; */
+    /* grid-column-end: auto; */
+    place-content: end;
+    /* place-items: center; */
+
+    gap: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    writing-mode: vertical-lr;
+    margin: 0px;
+    color: rgb(27, 25, 25);
+  }
+</style>
