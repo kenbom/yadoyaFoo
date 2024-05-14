@@ -1,7 +1,47 @@
 ---
   import Layout from "../layouts/Layout.astro";
+  // import CardTop from '../components/Card-top.astro';
+  import CardSub from '../components/Card-sub.astro'
+  import { Image } from "astro:assets";
+  import image1 from '../assets/tokono-ma.jpg'
+  import image2 from '../assets/rooms/living-room.jpg'
+  import image3 from '../assets/rooms/guest-room.jpg'
+  // import image4 from '../assets/garden/from-north.jpg'
+  import image4 from '../assets/rooms/dining-room.jpg'
+  import image6 from '../assets/facilities/hallway.jpg'
+
+  import '@fontsource/shippori-mincho';
 ---
 
 <Layout title="Rooms">
-  <p>rooms</p>
+  <hero class="page-subs">
+    <Image class="photo-hero" src={image1} alt={`床の間`} quality='mid' />
+    <CardSub href="" title="居間" body="別荘ゆかりの品々が置かれています" image={image2} />
+    <CardSub href="" title="客間" body="床の間が落ち着きを添えています" image={image3} />
+    <CardSub href="" title="ダイニング" body="まだ工事中ですね" image={image4} />
+    <!-- <CardSub href="" title="前庭" body="春には丸々とした梅の実を収穫" image={image4} /> -->
+
+  </hero>
+
+  <style>
+    .page-subs {
+      display: grid;
+      grid-template-columns: minmax(32px, 1fr) minmax(auto, 1120px) minmax(32px,
+          1fr);
+      ;
+      row-gap: 20px;
+      font-family: 'Shippori Mincho';
+
+      >* {
+        grid-column: 2 / -2;
+      }
+
+      >.photo-hero {
+        grid-column: 2 / -2;
+        grid-row: 1 / 2;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+  </style>
 </Layout>
