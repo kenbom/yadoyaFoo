@@ -31,7 +31,7 @@
 <hero class="page-hero">
 	<Image class="photo-hero" src={image1} alt={`cottage`} quality='mid' width={} />
 	<p></p>
-	<h1 class="page-title">髙橋別荘</h1>
+	<h1 class="page-title"><p>小田原 風祭</p>髙橋別荘</h1>
 
 	<CardTop href="/garden/" title="Garden" body="庭園" image={image3} />
 	<CardTop href="/rooms/" title="Rooms" body="居室" image={image4}></CardTop>
@@ -76,11 +76,16 @@
 			margin-left: 10px;
 			margin-bottom: 10px;
 			padding: 10px;
-			writing-mode: vertical-lr;
+			writing-mode: vertical-rl;
 			align-self: end;
 			justify-self: start;
 			/* color: #e3ebe7; */
 			background-color: rgba(220, 238, 220, 0.5);
+		}
+
+		.page-title>p {
+			font-size: medium;
+			margin: 0px;
 		}
 
 		>p {
