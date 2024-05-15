@@ -16,7 +16,6 @@
 		<div class="card-top">
 			<h2>
 				{title}
-				<!-- <span>&rarr;</span> -->
 			</h2>
 			<p>
 				{body}
@@ -27,65 +26,23 @@
 </li>
 
 <style>
-	p {
-		display: grid;
-		justify-content: center;
-		align-content: end;
-		text-decoration: none;
-		/* margin-top: 0.5rem;
-		margin-bottom: 0; */
-		writing-mode: vertical-rl;
-		font-size: 2rem;
-		color: rgb(27, 25, 25);
-		/* list-style: none; */
-	}
-
-	h2 {
-		color: rgb(27, 25, 25);
-		margin: 0;
-		font-size: larger;
-		text-decoration: none;
-		/* transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
-		/* list-style: none; */
-	}
-
-
 	.link-card {
 		text-decoration: none;
-		/* color: #000; */
 		list-style: none;
-		/* display: grid;
-		grid-template-columns: 1fr 1fr 1fr ; */
-		/* padding: 1px; */
-		/* background-color: #23262d; */
-		/* background: #c9c3ce; */
-		/* font-size: x-large; */
-		/* background-image: none;
-		background-size: 400%;
-		border-radius: 0px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); */
 	}
 
 	.card-top {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-flow: column;
+		align-items: center;
 		list-style: none;
-		/* gap: 30px; */
 	}
 
 	.link-card>a {
 		width: 100%;
 		text-decoration: none;
 		list-style: none;
-		/* line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: rgb(14, 13, 13); */
-		/* background-color: #23262d; */
-		/* background: #c9c3ce; */
-		/* opacity: 0.8; */
 	}
 
 	.photo-card {
@@ -102,10 +59,21 @@
 		list-style: none;
 	}
 
-	/* p:is(:hover, :focus-within) {
-		opacity: 50%;
-		transition: 0.2s;
+	h2 {
+		color: rgb(27, 25, 25);
+		margin: 0;
+		font-size: larger;
 		text-decoration: none;
-		list-style: none;
-	} */
+		align-self: flex-start;
+	}
+
+	p {
+		display: grid;
+		justify-content: center;
+		align-content: end;
+		text-decoration: none;
+		writing-mode: vertical-rl;
+		font-size: 2rem;
+		color: rgb(27, 25, 25);
+	}
 </style>
