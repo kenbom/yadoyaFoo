@@ -6,10 +6,22 @@
   import image2 from '../assets/garden/bamboo.jpg'
   import image3 from '../assets/garden/from-east-bank.jpg'
   import image5 from '../assets/garden-sky.jpg'
+  import { ViewTransitions, slide } from 'astro:transitions';
 
   import '@fontsource/shippori-mincho';
 ---
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{}</title>
+    <ViewTransitions />
+  </head>
 
+  <body>
 <Layout title="庭園">
   <hero class="page-subs">
     <Image class="photo-hero" src={image5} alt={`庭園`} quality='mid' />
@@ -17,6 +29,7 @@
     <CardSub href="" title="西の竹林" body="裏庭から広がる竹林" image={image2} />
     <CardSub href="" title="東の庭" body="野趣あふれる夏の前庭" image={image3} />
   </hero>
+</body>
 
   <style>
     .page-subs {
