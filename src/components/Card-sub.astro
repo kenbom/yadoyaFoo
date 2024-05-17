@@ -11,7 +11,7 @@ const { title, body, image } = Astro.props;
 ---
 
 <li class="link-card">
-  <div class="card-top">
+  <div class="card-sub">
     <h2>
       {title}
     </h2>
@@ -32,9 +32,14 @@ const { title, body, image } = Astro.props;
     text-decoration: none;
   }
 
-  .card-top {
+  .card-sub {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+
+    @media (max-width: 496px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   h2 {
@@ -42,6 +47,9 @@ const { title, body, image } = Astro.props;
     font-size: 1.25rem;
     /* transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
     color: rgb(27, 25, 25);
+    @media (max-width: 496px) {
+      font-size: 1rem;
+    }
   }
 
   p {
@@ -53,11 +61,19 @@ const { title, body, image } = Astro.props;
     height: 150px;
     margin-top: 50px;
     color: rgb(27, 25, 25);
+
+    @media (max-width: 496px) {
+      font-size: medium;
+    }
   }
 
   .photo-card {
     object-fit: cover;
     width: 100%;
     height: 300px;
+
+    @media (max-width: 496px) {
+      grid-column: 3 / -1;
+    }
   }
 </style>

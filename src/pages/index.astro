@@ -31,30 +31,15 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
         <p>小田原 風祭</p>髙橋別荘
       </h1>
       <div class="card-tops">
-        <CardTop
-          href="/garden/"
-          title="Garden"
-          body="庭園"
-          image={image3}
-        />
-        <CardTop
-          href="/rooms/"
-          title="Rooms"
-          body="居室"
-          image={image4}
-        />
+        <CardTop href="/garden/" title="Garden" body="庭園" image={image3} />
+        <CardTop href="/rooms/" title="Rooms" body="居室" image={image4} />
         <CardTop
           href="/facilities/"
           title="Facilities"
           body="設備"
           image={image6}
         />
-        <CardTop
-          href="/around/"
-          title="Around"
-          body="周辺"
-          image={image2}
-        />
+        <CardTop href="/around/" title="Around" body="周辺" image={image2} />
       </div>
       <div class="operater">
         <p>運営：猫髭工房</p>
@@ -78,6 +63,13 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
           );
         row-gap: 20px;
         font-family: 'Shippori Mincho';
+
+        @media (max-width: 496px) {
+          grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
+              18px,
+              1fr
+            );
+        }
       }
 
       .photo-hero {
@@ -125,7 +117,10 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
         width: 100%;
         height: 30px;
         margin-top: 20px;
-        /* padding: 10px; */
+
+        @media (max-width: 496px) {
+          font-size: small;
+        }
       }
     </style>
   </body>
