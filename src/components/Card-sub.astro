@@ -1,75 +1,63 @@
 ---
-	import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-	interface Props {
-		title: string;
-		body: string;
-		href: string;
-		image: ImageMetadata;
-	}
+interface Props {
+  title: string;
+  body: string;
+  image: ImageMetadata;
+}
 
-	const { href, title, body, image } = Astro.props;
+const { title, body, image } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
-		<div class="card-top">
-			<h2>
-				{title}
-			</h2>
-			<p>
-				{body}
-			</p>
-			<Image class="photo-card" src={image} alt={`cottage`} quality='mid' width={} />
-		</div>
-	</a>
+  <div class="card-top">
+    <h2>
+      {title}
+    </h2>
+    <p>
+      {body}
+    </p>
+    <Image class="photo-card" src={image} alt={`cottage`} quality="mid" />
+  </div>
 </li>
 
 <style>
-	.link-card {
-		list-style: none;
-	}
+  .link-card {
+    list-style: none;
+  }
 
-	.link-card>a {
-		width: 100%;
-		text-decoration: none;
-	}
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+  }
 
-	.card-top {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-	}
+  .card-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		/* transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
-		color: rgb(27, 25, 25);
-	}
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    /* transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
+    color: rgb(27, 25, 25);
+  }
 
-	p {
-		display: grid;
-		justify-content: center;
-		align-content: end;
-		writing-mode: vertical-rl;
-		font-size: larger;
-		height: 150px;
-		margin-top: 50px;
-		color: rgb(27, 25, 25);
-	}
+  p {
+    display: grid;
+    justify-content: center;
+    align-content: end;
+    writing-mode: vertical-rl;
+    font-size: larger;
+    height: 150px;
+    margin-top: 50px;
+    color: rgb(27, 25, 25);
+  }
 
-	.photo-card {
-		object-fit: cover;
-		width: 100%;
-		height: 300px;
-	}
-
-	/* .link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		/* background-image: var(--accent-gradient); */
-
-
-	/* .link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	} */
+  .photo-card {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+  }
 </style>

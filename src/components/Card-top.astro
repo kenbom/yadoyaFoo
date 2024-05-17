@@ -1,79 +1,79 @@
 ---
-	import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-	interface Props {
-		title: string;
-		body: string;
-		href: string;
-		image: ImageMetadata;
-	}
+interface Props {
+  title: string;
+  body: string;
+  href: string;
+  image: ImageMetadata;
+}
 
-	const { href, title, body, image } = Astro.props;
+const { href, title, body, image } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
-		<div class="card-top">
-			<h2>
-				{title}
-			</h2>
-			<p>
-				{body}
-			</p>
-			<Image class="photo-card" src={image} alt={`cottage`} quality='mid' width={} />
-		</div>
-	</a>
+  <a href={href}>
+    <div class="card-top">
+      <h2>
+        {title}
+      </h2>
+      <p>
+        {body}
+      </p>
+      <Image class="photo-card" src={image} alt={`cottage`} quality="mid" />
+    </div>
+  </a>
 </li>
 
 <style>
-	.link-card {
-		text-decoration: none;
-		list-style: none;
-	}
+  .link-card {
+    text-decoration: none;
+    list-style: none;
+  }
 
-	.card-top {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-auto-flow: column;
-		align-items: center;
-		list-style: none;
-	}
+  .card-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    list-style: none;
+  }
 
-	.link-card>a {
-		width: 100%;
-		text-decoration: none;
-		list-style: none;
-	}
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+  }
 
-	.photo-card {
-		object-fit: cover;
-		width: 100%;
-		height: 300px;
-		list-style: none;
-	}
+  .photo-card {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    list-style: none;
+  }
 
-	.link-card:hover {
-		transition: 0.2s;
-		opacity: 50%;
-		text-decoration: none;
-		list-style: none;
-	}
+  .link-card:hover {
+    transition: 0.2s;
+    opacity: 50%;
+    text-decoration: none;
+    list-style: none;
+  }
 
-	h2 {
-		color: rgb(27, 25, 25);
-		margin: 0;
-		font-size: larger;
-		text-decoration: none;
-		align-self: flex-start;
-	}
+  h2 {
+    color: rgb(27, 25, 25);
+    margin: 0;
+    font-size: larger;
+    text-decoration: none;
+    align-self: flex-start;
+  }
 
-	p {
-		display: grid;
-		justify-content: center;
-		align-content: end;
-		text-decoration: none;
-		writing-mode: vertical-rl;
-		font-size: 2rem;
-		color: rgb(27, 25, 25);
-	}
+  p {
+    display: grid;
+    justify-content: center;
+    align-content: end;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    font-size: 2rem;
+    color: rgb(27, 25, 25);
+  }
 </style>
