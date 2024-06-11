@@ -13,8 +13,7 @@
     "@astrojs/vercel": "^7.6.0",
     "@fontsource/shippori-mincho": "^5.0.13",
     "astro": "^4.7.1",
-    "sharp": "^0.33.3",
-    "vanjs-core": "^1.5.0"
+    "sharp": "^0.33.3"
   },
   "volta": {
     "node": "20.3.0"
