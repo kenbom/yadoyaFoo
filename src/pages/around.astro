@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import CardSub from '../components/Card-sub.astro';
 import { Image } from 'astro:assets';
-import image1 from '../assets/around/dogrun.png';
 import image2 from '../assets/around/tobira2.png';
 import image3 from '../assets/around/umi.jpg';
 import image4 from '../assets/around/odawara-joe.png';
@@ -15,11 +14,6 @@ import '@fontsource/shippori-mincho';
 <Layout title="近場のお楽しみ">
   <hero class="page-subs">
     <Image class="photo-hero" src={image6} alt={`籠清さん`} quality="mid" />
-    <!-- <CardSub
-      title="ドッグラン 犬と海辺"
-      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
-      image={image1}
-    /> -->
     <CardSub
       title="海への扉"
       body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
