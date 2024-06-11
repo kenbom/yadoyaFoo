@@ -1,14 +1,18 @@
 ---
 import CardTop from '../components/Card-top.astro';
+import VanjsTest from '../components/Vanjs-test.astro';
+import DrawerHeader from '../components/Drawer-header.astro';
+import Hero from '../components/Hero.astro';
 import { Image } from 'astro:assets';
-import image1 from '../assets/house-front.jpg';
-import image2 from '../assets/bamboo-thicket.jpg';
-import image3 from '../assets/garden-sky.jpg';
-import image4 from '../assets/tokono-ma.jpg';
-import image6 from '../assets/facilities/hallway.jpg';
+import image1 from '../assets/index/foo-gaikan.png';
+import image2 from '../assets/index/minaka.png';
+import image3 from '../assets/index/kagosei.jpg';
+// import image4 from '../assets/tokono-ma.jpg';
+// import image6 from '../assets/facilities/hallway.jpg';
 
 import '@fontsource/shippori-mincho';
 import { ViewTransitions, fade, slide } from 'astro:transitions';
+// import van from 'vanjs-core';
 ---
 
 <!doctype html>
@@ -18,31 +22,49 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="../assets/reset.css" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{'Takahashi-Bessou'}</title>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <meta name="generator" conYadoya-Fooo.generator} />
+    <title>{'宿屋 ふう'}</title>
     <ViewTransitions />
   </head>
 
   <body transition:animate={fade({ duration: '1s' })}>
-    <hero class="page-hero">
-      <Image class="photo-hero" src={image1} alt={`cottage`} quality="mid" />
-      <h1 class="page-title">
-        <p>小田原 風祭</p>髙橋別荘
-      </h1>
+    <!-- <div id="vanjs" />
+    <VanjsTest client:load />
+  </div> -->
+    <!-- <div style="margin-top: 100px; margin-bottom: 100px;"> -->
+    <!-- <DrawerHeader client:load />
+      <div></div> -->
+    <Hero />
+    <hero class="top-page">
+      <!-- <Image class="photo-hero" src={image1} alt={`cottage`} quality="mid" />
+        <h1 class="page-title">
+          <p>小田原 風祭</p>髙橋別荘
+        </h1> -->
+
       <div class="card-tops">
-        <CardTop href="/garden/" title="Garden" body="庭園" image={image3} />
-        <CardTop href="/rooms/" title="Rooms" body="居室" image={image4} />
         <CardTop
-          href="/facilities/"
-          title="Facilities"
-          body="設備"
-          image={image6}
+          href="/about/"
+          title="宿屋 ふう のご紹介"
+          body="小田原のどこへでもアクセス可能な南町、観光名所かまぼこ通りのすぐそばにオープンしました"
+          image={image1}
         />
-        <CardTop href="/around/" title="Around" body="周辺" image={image2} />
+        <CardTop
+          href="/around/"
+          title="近場のお楽しみ"
+          body="徒歩5分内にたくさんの自然、そして美味しさあふれる老舗やカフェがお待ちしています"
+          image={image3}
+        />
+        <CardTop
+          href="/littleFar/"
+          title="足をのばせば・・・"
+          body="小田原駅へ徒歩10分、駅から箱根へのアクセスは自由自在、さらに漁港や石垣山など楽しさ満載の小田原です"
+          image={image2}
+        />
+        <!-- <CardTop href="/around/" title="アクセス" body="周辺" image={image2} /> -->
       </div>
       <div class="operater">
-        <p>運営：猫髭工房</p>
+        <p>©宿屋 ふう</p>
       </div>
     </hero>
     <style>
@@ -55,7 +77,7 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
         color: rgb(29, 27, 27);
       }
 
-      .page-hero {
+      .top-page {
         display: grid;
         grid-template-columns: minmax(32px, 1fr) minmax(auto, 1120px) minmax(
             32px,
@@ -64,12 +86,12 @@ import { ViewTransitions, fade, slide } from 'astro:transitions';
         row-gap: 20px;
         font-family: 'Shippori Mincho';
 
-        @media (max-width: 496px) {
+        /* @media (max-width: 496px) {
           grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
               1px,
               1fr
-            );
-        }
+            ); */
+        /* } */
       }
 
       .photo-hero {

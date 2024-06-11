@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets';
+import imgLeftUp from '../assets/index/chochin.jpg';
+import imgRightUp from '../assets/index/umiyama.jpg';
+import imgLeftDown from '../assets/index/tobira2.png';
+import imgRightDown from '../assets/index/hasu.jpg';
+import imgCenter from '../assets/index/foo-kanban.jpg';
+---
+
+<div class="container">
+  <div class="main-title">
+    <p>小田原の四季に遊ぶ</p>
+    <h3>宿屋</h3>
+    <h2>ふう</h2>
+  </div>
+  <div class="imgLeftUp"><Image src={imgLeftUp} alt="提灯" /></div>
+  <div class="imgRightUp"><Image src={imgRightUp} alt="海と山" /></div>
+  <div class="imgLeftDown"><Image src={imgLeftDown} alt="海への扉" /></div>
+  <div class="imgRightDown"><Image src={imgRightDown} alt="蓮の花" /></div>
+  <div class="imgCenter"><Image src={imgCenter} alt="籠清さん" /></div>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      /* aspect-ratio: 5/8; */
+      width: 60%;
+      margin: auto;
+      /* place-content: center; */
+    }
+
+    .main-title {
+      grid-column: 4/9;
+      grid-row: 3/6;
+      background-color: rgba(241, 229, 238, 0.7);
+      justify-content: end;
+      align-content: center;
+      writing-mode: vertical-rl;
+      z-index: 10;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10%;
+
+      @media (max-width: 496px) {
+        font-size: 0.7rem
+        /* margin-top: 1.5rem; */
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 20%;
+
+      @media (max-width: 496px) {
+        font-size: 0.85rem;
+        /* margin-top: 20%; */
+      }
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      margin-top: 30%;
+      align-self: center;
+
+      @media (max-width: 496px) {
+        font-size: 1.5rem;
+        margin-top: 20%;
+        margin-left: 20%;
+        margin-right: -5%;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+        /* margin-top: 3.5rem; */
+      }
+    }
+
+    .imgLeftUp {
+      grid-column: 2/6;
+      grid-row: 2/6;
+    }
+
+    .imgRightUp {
+      grid-column: 7/12;
+      grid-row: 1/3;
+    }
+
+    .imgLeftDown {
+      grid-column: 1/10;
+      grid-row: 5/13;
+    }
+
+    .imgRightDown {
+      grid-column: 9/13;
+      grid-row: 4/10;
+    }
+
+    .imgCenter {
+      grid-column: 8/11;
+      grid-row: 2/5;
+      margin-top: 40px;
+      /* object-fit: fill; */
+    }
+  </style>
+</div>

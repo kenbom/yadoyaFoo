@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardSub from '../components/Card-sub.astro';
+import { Image } from 'astro:assets';
+import image0 from '../assets/no-image.png';
+import image1 from '../assets/about/foo-gaikan.png';
+import image2 from '../assets/garden/bamboo.jpg';
+import image3 from '../assets/garden/from-east-bank.jpg';
+import image5 from '../assets/garden-sky.jpg';
+import { ViewTransitions, slide } from 'astro:transitions';
+
+import '@fontsource/shippori-mincho';
+---
+
+<Layout title="ふうのご紹介" client:load>
+  <hero class="page-subs">
+    <Image class="photo-hero" src={image1} alt={`ふうのご紹介`} quality="mid" />
+    <CardSub
+      title="部屋"
+      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
+      image={image0}
+    />
+    <CardSub
+      title="料理"
+      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
+      image={image0}
+    />
+    <CardSub
+      title="アクセス"
+      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
+      image={image0}
+    />
+  </hero>
+
+  <style>
+    .page-subs {
+      display: grid;
+      grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
+          18px,
+          1fr
+        );
+      row-gap: 20px;
+      font-family: 'Shippori Mincho';
+
+      > * {
+        grid-column: 2 / -2;
+      }
+
+      > .photo-hero {
+        grid-row: 1 / 2;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  </style>
+</Layout>

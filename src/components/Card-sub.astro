@@ -27,24 +27,25 @@ const { title, body, image } = Astro.props;
     list-style: none;
   }
 
-  .link-card > a {
+  /* .link-card > a {
     width: 100%;
     text-decoration: none;
-  }
+  } */
 
   .card-sub {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 25% 1fr 1fr;
     width: 100%;
 
     @media (max-width: 496px) {
-      grid-template-columns: repeat(4, 1fr);
+      display: block;
+      /* grid-template-columns: repeat(4, 1fr); */
     }
   }
 
   h2 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     /* transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
     color: rgb(27, 25, 25);
     @media (max-width: 496px) {
@@ -56,14 +57,19 @@ const { title, body, image } = Astro.props;
     display: grid;
     justify-content: center;
     align-content: end;
-    writing-mode: vertical-rl;
-    font-size: larger;
+    /* writing-mode: vertical-rl; */
+    font-size: 1rem;
     height: 150px;
     margin-top: 50px;
     color: rgb(27, 25, 25);
 
     @media (max-width: 496px) {
-      font-size: medium;
+      font-size: 0.8rem;
+      display: block;
+      height: inherit;
+      margin-top: inherit;
+      padding: 10px;
+      padding-bottom: 8px;
     }
   }
 
