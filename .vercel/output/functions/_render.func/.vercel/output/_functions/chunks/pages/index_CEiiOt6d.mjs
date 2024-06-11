@@ -1,7 +1,7 @@
 import { e as createComponent, r as renderTemplate, m as maybeRenderHead, g as addAttribute, i as renderComponent, h as createAstro, j as renderHead, k as renderTransition, n as fade } from '../astro_0Fb2eD6u.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Image, c as $$ViewTransitions } from './about_dWlD34jG.mjs';
+import { $ as $$Image, c as $$ViewTransitions } from './about_umWkEnkF.mjs';
 /* empty css                          */
 /* empty css                          */
 

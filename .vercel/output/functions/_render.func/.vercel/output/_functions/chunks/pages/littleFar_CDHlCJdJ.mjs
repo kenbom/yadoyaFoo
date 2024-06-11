@@ -1,7 +1,7 @@
 import { e as createComponent, r as renderTemplate, i as renderComponent, m as maybeRenderHead } from '../astro_0Fb2eD6u.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Image, a as $$CardSub, d as image0, b as $$Layout } from './about_dWlD34jG.mjs';
+import { $ as $$Image, a as $$CardSub, d as image0, b as $$Layout } from './about_umWkEnkF.mjs';
 /* empty css                          */
 /* empty css                              */
 
