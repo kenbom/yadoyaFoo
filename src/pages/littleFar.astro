@@ -2,15 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import CardSub from '../components/Card-sub.astro';
 import { Image } from 'astro:assets';
-import image0 from '../assets/no-image.png';
-import image1 from '../assets/littleFar/yumoto-hashi.png';
-import image2 from '../assets/littleFar/ishigakiyama.png';
-import image6 from '../assets/littleFar/minaka.png';
-import image3 from '../assets/littleFar/gyokou.png';
-import image4 from '../assets/littleFar/odawara-eki.webp';
-
+import image1 from '../assets/littleFar/yumoto-hashi.jpg';
+import image2 from '../assets/littleFar/ishigakiyama.jpg';
+import image6 from '../assets/littleFar/minaka.jpg';
+import image4 from '../assets/littleFar/odawara-eki.jpg';
 
 import '@fontsource/shippori-mincho';
+import CardCarousel from '../components/CardCarousel.astro';
 ---
 
 <Layout title="足をのばせば">
@@ -27,14 +25,14 @@ import '@fontsource/shippori-mincho';
       image={image1}
     />
     <CardSub
-      title="小田原漁港"
-      body="漁港からあがった新鮮な地魚を食するならココ。個性的なお店がたくさんあって今日はドコにするか迷います"
-      image={image3}
-    />
-    <CardSub
       title="石垣山"
       body="景色最高、こんな場所があったなんて！ヨロイヅカファームのアイスも忘れずに食べていってください"
       image={image2}
+    />
+
+    <CardCarousel
+      title="小田原漁港"
+      body="漁港からあがった新鮮な地魚を食するならココ。個性的なお店がたくさんあって今日はドコにするか迷います"
     />
   </hero>
 
