@@ -1,7 +1,7 @@
 <script>
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import Autoplay from 'embla-carousel-autoplay';
-  let slide1 = '/src/assets/littleFar/gyokou.jpg';
+  import slide1 from '../assets/littleFar/gyokou.jpg';
   let slide2 = '/src/assets/littleFar/sajirushi.jpg';
   let slide3 = '/src/assets/littleFar/syokudou.jpg';
 
@@ -22,10 +22,10 @@
 >
   <div class="embla__container">
     <div class="embla__slide">
-      <img class="image" src={slide1} alt="test" />
+      <img class="image" src={slide1} alt="小田原漁港" />
     </div>
-    <div class="embla__slide"><img class="image" src={slide2} alt="test" /></div>
-    <div class="embla__slide"><img class="image" src={slide3} alt="test" /></div>
+    <div class="embla__slide"><img class="image" src={slide2} alt="さじるし食堂" /></div>
+    <div class="embla__slide"><img class="image" src={slide3} alt="食堂" /></div>
   </div>
 </div>
 
