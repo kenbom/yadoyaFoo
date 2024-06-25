@@ -5,10 +5,10 @@
   //以下Emblaスクリプト
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import Autoplay from 'embla-carousel-autoplay';
-  import slide1 from '../assets/littleFar/gyokou.jpg';
-  import slide2 from '../assets/littleFar/sajirushi.jpg';
-  import slide3 from '../assets/littleFar/syokudou.jpg';
-  import { slide } from 'astro/virtual-modules/transitions.js';
+  // import slide1 from '../assets/littleFar/gyokou.jpg';
+  // import slide2 from '../assets/littleFar/sajirushi.jpg';
+  // import slide3 from '../assets/littleFar/syokudou.jpg';
+  // import { slide } from 'astro/virtual-modules/transitions.js';
 
   let emblaApi;
   let options = { loop: true };

@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import CardSub from '../components/Card-sub.astro';
 import { Image } from 'astro:assets';
+import '@fontsource/shippori-mincho';
+import CardCarouselSvelte from '../components/CardCarouselSvelte.svelte';
 import image1 from '../assets/littleFar/yumoto-hashi.jpg';
 import image2 from '../assets/littleFar/ishigakiyama.jpg';
 import image6 from '../assets/littleFar/minaka.jpg';
@@ -22,8 +24,6 @@ const slidesObjs = [{
   alt: '食堂'
 }]
 
-import '@fontsource/shippori-mincho';
-import CardCarouselSvelte from '../components/CardCarouselSvelte.svelte';
 ---
 
 <Layout title="足をのばせば">
