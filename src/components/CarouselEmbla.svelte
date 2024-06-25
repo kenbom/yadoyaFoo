@@ -2,7 +2,7 @@
   import emblaCarouselSvelte from 'embla-carousel-svelte';
   import Autoplay from 'embla-carousel-autoplay';
   import slide1 from '../assets/littleFar/gyokou.jpg';
-  import slide2 from  '../assets/littleFar/sajirushi.jpg';
+  import slide2 from '../assets/littleFar/sajirushi.jpg';
   import slide3 from '../assets/littleFar/syokudou.jpg';
 
   let emblaApi;
@@ -24,8 +24,12 @@
     <div class="embla__slide">
       <img class="image" src={slide1.src} alt="小田原漁港" />
     </div>
-    <div class="embla__slide"><img class='image' src={slide2.src} alt="さじるし食堂" /></div>
-    <div class="embla__slide"><img class="image" src={slide3.src} alt="食堂" /></div>
+    <div class="embla__slide">
+      <img class="image" src={slide2.src} alt="さじるし食堂" />
+    </div>
+    <div class="embla__slide">
+      <img class="image" src={slide3.src} alt="食堂" />
+    </div>
   </div>
 </div>
 

@@ -6,9 +6,24 @@ import image1 from '../assets/littleFar/yumoto-hashi.jpg';
 import image2 from '../assets/littleFar/ishigakiyama.jpg';
 import image6 from '../assets/littleFar/minaka.jpg';
 import image4 from '../assets/littleFar/odawara-eki.jpg';
+import slide1 from '../assets/littleFar/gyokou.jpg';
+import slide2 from '../assets/littleFar/sajirushi.jpg';
+import slide3 from '../assets/littleFar/syokudou.jpg';
+const slidesObjs = [{
+  slide: slide1,
+  alt: '小田原漁港'
+},
+{
+  slide: slide2,
+  alt: 'さじるし食堂'
+},
+{
+  slide: slide3,
+  alt: '食堂'
+}]
 
 import '@fontsource/shippori-mincho';
-import CardCarousel from '../components/CardCarousel.astro';
+import CardCarouselSvelte from '../components/CardCarouselSvelte.svelte';
 ---
 
 <Layout title="足をのばせば">
@@ -29,33 +44,40 @@ import CardCarousel from '../components/CardCarousel.astro';
       body="景色最高、こんな場所があったなんて！ヨロイヅカファームのアイスも忘れずに食べていってください"
       image={image2}
     />
+    <div class="carousel">
+      <CardCarouselSvelte
+        client:load
+        title="小田原漁港"
+        body="漁港からあがった新鮮な地魚を食するならココ。個性的なお店がたくさんあって今日はドコにするか迷います"
+        {slidesObjs}
+      />
+    </div>
 
-    <CardCarousel
-      title="小田原漁港"
-      body="漁港からあがった新鮮な地魚を食するならココ。個性的なお店がたくさんあって今日はドコにするか迷います"
-    />
+    <style>
+      .page-subs {
+        display: grid;
+        grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
+            18px,
+            1fr
+          );
+        row-gap: 20px;
+        font-family: 'Shippori Mincho';
+
+        > * {
+          grid-column: 2 / -2;
+        }
+
+        .carousel {
+          grid-column: 2 / -2;
+        }
+
+        > .photo-hero {
+          grid-row: 1 / 2;
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+        }
+      }
+    </style>
   </hero>
-
-  <style>
-    .page-subs {
-      display: grid;
-      grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
-          18px,
-          1fr
-        );
-      row-gap: 20px;
-      font-family: 'Shippori Mincho';
-
-      > * {
-        grid-column: 2 / -2;
-      }
-
-      > .photo-hero {
-        grid-row: 1 / 2;
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-      }
-    }
-  </style>
 </Layout>
