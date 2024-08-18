@@ -1,0 +1,65 @@
+---
+import Image from 'astro/components/Image.astro';
+import welcomegate from '../assets/about/welcomegate.webp';
+import dining from '../assets/about/dining.webp';
+import firstroof from '../assets/about/1stroof.jpg';
+import secondroof from '../assets/about/2ndroof.jpg';
+import secondroom from '../assets/about/2ndroom.webp';
+import kitchen from '../assets/about/kitchen.webp';
+import bathrooom from '../assets/about/bathroom.webp';
+import amenity from '../assets/about/amenity.webp';
+import laundry from '../assets/about/laundry.webp';
+import washlet from '../assets/about/washlet.webp';
+import showerhead from '../assets/about/showerhead.webp';
+---
+
+<h3>設備へのこだわり</h3>
+<div class="facilitylayout">
+  <p class="caption">
+    調理が楽しくなるバルミューダのレンジ、旅行中の素早いお洗濯にガス乾燥機。などなど旅の楽しさを損なわない設備にこだわりました
+  </p>
+  <Image src={kitchen} alt="kitchen" class="pict" />
+  <div></div>
+  <Image src={washlet} alt="washlet" />
+  <Image src={showerhead} alt="showerhead" />
+  <Image src={bathrooom} alt="bathroom" class="pict" />
+  <Image src={amenity} alt="amenity" class="pict" />
+  <div class="pict">
+    <Image src={laundry} alt="laundry" />
+  </div>
+</div>
+
+<style>
+  .facilitylayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 74px 120px 80px; */
+      grid-template-rows: repeat(3, auto);
+
+    @media (min-width: 496px) {
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  .caption {
+    grid-column: 1 / 3;
+  }
+
+  .pict {
+    object-fit: cover;
+    background-color: #1b1828;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+
+    @media (min-width: 496px) {
+      font-size: 1rem;
+      padding-right: 100px;
+    }
+  }
+</style>

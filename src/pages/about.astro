@@ -1,31 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CardSub from '../components/Card-sub.astro';
+import PictRooms from '../components/PictRooms.astro';
 import { Image } from 'astro:assets';
-import image0 from '../assets/no-image.png';
-import image1 from '../assets/about/foo-gaikan.png';
+import image1 from '../assets/about/housegate.jpg';
 
 import '@fontsource/shippori-mincho';
+import PrictFacilities from '../components/PrictFacilities.astro';
 ---
 
-<Layout title="ふうのご紹介" >
+<Layout title="ふうのご紹介">
   <hero class="page-subs">
     <Image class="photo-hero" src={image1} alt={`ふうのご紹介`} quality="mid" />
-    <CardSub
-      title="部屋"
-      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. "
-      image={image0}
-    />
-    <CardSub
-      title="料理"
-      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
-      image={image0}
-    />
-    <CardSub
-      title="アクセス"
-      body="Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
-      image={image0}
-    />
+    <PictRooms />
+    <PrictFacilities />
   </hero>
 
   <style>
@@ -45,7 +32,7 @@ import '@fontsource/shippori-mincho';
       > .photo-hero {
         grid-row: 1 / 2;
         width: 100%;
-        height: 500px;
+        height: 600px;
         object-fit: cover;
       }
     }

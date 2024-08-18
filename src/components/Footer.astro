@@ -2,8 +2,16 @@
 
 ---
 
-<div class="footer">
-  <p>©宿屋　ふう</p>
+<div class="button-display">
+  <a
+    href="https://www.airbnb.jp/rooms/1209129972598171526?adults=1&children=0&enable_m3_private_room=true&infants=0&pets=0&search_mode=regular_search&check_in=2024-10-01&check_out=2024-10-06&source_impression_id=p3_1723666445_P3XuNiO5hoVEMwLI&previous_page_section_name=1000&federated_search_id=3f64ef9b-df2d-42b6-a9f2-1613c1027ebd"
+    class="reserve-button"
+    target="_blank"><span>ご予約はこちらから</span></a
+  >
+
+  <div class="footer">
+    <p>©宿屋　ふう</p>
+  </div>
 </div>
 
 <style>
@@ -18,8 +26,43 @@
     color: rgb(248, 245, 245);
     background-color: rgba(22, 8, 8, 0.726);
     width: 100%;
-    margin-top: 20px;
+    height: 40px;
+    margin-top: 10px;
   }
+
+  .button-display {
+    display: grid;
+    grid-template-columns: minmax(18px, 1fr) minmax(auto, 1120px) minmax(
+        18px,
+        1fr
+      );
+    row-gap: 20px;
+    /* font-family: 'Shippori Mincho'; */
+
+    > * {
+      grid-column: 2 / -2;
+    }
+  }
+
+  .reserve-button {
+    height: 40px;
+    background-color: rgba(237, 197, 234, 0.5);
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .reserve-button:hover {
+    background-color: rgba(237, 197, 234, 0.2);
+    color: #595757;
+  }
+
+  /* .reserve-button:active {
+    background-color: rgba(237, 197, 234, 0.2);
+    color: #595757;
+  } */
 
   p {
     font-size: medium;
@@ -28,4 +71,6 @@
       font-size: small;
     }
   }
+
+
 </style>

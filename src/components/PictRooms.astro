@@ -1,0 +1,48 @@
+---
+import Image from 'astro/components/Image.astro';
+import welcomegate from '../assets/about/welcomegate.webp';
+import dining from '../assets/about/dining.webp';
+import firstroof from '../assets/about/1stroof.jpg';
+import secondroof from '../assets/about/2ndroof.jpg';
+import secondroom from '../assets/about/2ndroom.webp';
+---
+
+<h3>居室へのこだわり</h3>
+<div class="framelayout">
+  <div>
+    <p>
+      １階と２階に１室ずつと決して広くはありません。けれども木のぬくもりにほっとしていただける空間を心を込めて整えました。玄関から始まるこだわりをご体験ください
+    </p>
+  </div>
+  <Image src={welcomegate} alt="welcomegate" />
+  <Image src={dining} alt="dining" />
+  <div></div>
+  <div></div>
+  <Image src={firstroof} alt="firstroof" />
+  <div></div>
+  <div></div>
+  <Image src={secondroof} alt="secondroof" />
+  <div></div>
+  <div></div>
+  <Image src={secondroom} alt="secondroom" />
+</div>
+
+<style>
+  .framelayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    
+    @media (min-width: 496px) {
+      font-size: 1rem;
+      padding-right: 100px;
+    }
+  }
+</style>
