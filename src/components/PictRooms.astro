@@ -10,7 +10,7 @@ import secondroom from '../assets/about/2ndroom.webp';
 <h3>居室へのこだわり</h3>
 <div class="framelayout">
   <div>
-    <p>
+    <p class="caption">
       １階と２階に１室ずつと決して広くはありません。けれども木のぬくもりにほっとしていただける空間を心を込めて整えました。玄関から始まるこだわりをご体験ください
     </p>
   </div>
@@ -31,6 +31,10 @@ import secondroom from '../assets/about/2ndroom.webp';
   .framelayout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caption {
+    padding-right: 20px;
   }
 
   h3 {
